@@ -1,0 +1,77 @@
+SINGLE INHERITANCE
+
+
+class car {
+    void colour(){
+        System.out.println("My BMW is Black colour");
+    }
+}
+class variant extends car {
+    void series(){
+        System.out.println("It is BMW X5");
+    }
+}
+class main {
+    public static void main(String[] args){
+        variant c=new variant();
+        c.colour();
+        c.series();
+    }
+}
+
+
+MULTILEVEL INHERITANCE
+
+
+class car {
+    void colour(){
+        System.out.println("My BMW is Black colour");
+    }
+}
+class variant extends car {
+    void series(){
+        System.out.println("It is BMW X5");
+    }
+}
+class features extends variant {
+    void autopilot(){
+        System.out.println("It will support auto parking");
+    }
+}
+class main {
+    public static void main(String[] args){
+        features c=new features();
+        c.colour();
+        c.series();
+        c.autopilot();
+    }
+}
+
+
+HIERACHICAL INHERITANCE
+
+class car {
+    void colour(){
+        System.out.println("My BMW is Black colour");
+    }
+}
+class variant extends car {
+    void series(){
+        System.out.println("It is BMW X5");
+    }
+}
+class features extends car {
+    void autopilot(){
+        System.out.println("It will support auto parking");
+    }
+}
+class main {
+    public static void main(String[] args){
+        variant c=new variant();
+        c.colour();
+        c.series();
+        features d=new features();
+        d.colour();
+        d.autopilot();
+    }
+}
